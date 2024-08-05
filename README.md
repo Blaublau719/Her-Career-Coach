@@ -1,8 +1,8 @@
-### Her-Career-Coach
+# Her-Career-Coach
 This LLM-powered digital career coach leverages the CrewAI framework and the GPT-3.5-turbo model by OpenAI. Designed by Lan, serves as a personalized tool to enhance her job applications and career opportunities.
 
 ## To initialize
-You will need to get your own OpenAI API key at: https://platform.openai.com/api-keys. And then save it in the variable 'openai_api_key'. To ensure successful use of API key, you may need to add payment methods and charge your OpenAI first...
+You will need to get your own OpenAI API key at: https://platform.openai.com/api-keys. And then save it in the variable 'openai_api_key'. To ensure successful use of API key, you may need to add payment methods and charge your OpenAI first at https://platform.openai.com/settings/organization/billing/overview
 
 ## Understand the framework
 This tool is build up on basic CrewAI framwork with some self written tools. The structure is super easy to understand:
