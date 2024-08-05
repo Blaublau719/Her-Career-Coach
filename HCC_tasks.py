@@ -1,6 +1,7 @@
 from crewai import Task
 from HCC_tools import HCC_Tools
 from job_description import JobDescription
+from company_description import CompInfo
 from some_task_library import Task  # Replace with the actual library you are using
 
 class HCC_Tasks():
