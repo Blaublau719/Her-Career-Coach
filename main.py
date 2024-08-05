@@ -34,7 +34,7 @@ class HCCCrew:
       self.Personal_Statement
     )
     WriteCL = tasks.WriteCL(
-      ResumeImprover, 
+      CoverLetterWriter
     )
 
     crew = Crew(
