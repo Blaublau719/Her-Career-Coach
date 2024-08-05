@@ -98,12 +98,12 @@ class HCC_Tasks():
       output_file="refined_resume.md",
       # output_file=f"RefCV4_{comp_name}_{job_position}")
       
-  def WriteCL(self, resumeContent):
+  def WriteCL(self, Motivation):
     return Task(
       description=(
           "Write a compelling cover letter for your client that effectively showcases their qualifications for the job position."
           "Follow these guidelines:"
-          "1. Tailor the content to the specific job and company, using information from AboutJob and AboutClient."
+          "1. Tailor the content to the specific job and company, using information from AboutJob, AboutClient, and her {Motivation} for the job."
           "2. Highlight the client's most relevant skills and experiences that align with the job requirements."
           "3. Use a professional yet approachable tone, avoiding overly complex language."
           "4. Incorporate keywords from the job posting to improve ATS compatibility."
@@ -117,6 +117,7 @@ class HCC_Tasks():
           "A well-crafted, one-page cover letter in markdown format that:"
           "- Is tailored to the specific job and company"
           "- Highlights the client's most relevant qualifications"
+          "- Incoporate her motivation for the job"
           "- Uses a professional but easily understandable tone"
           "- Incorporates relevant keywords from the job posting"
           "- Is free of errors and typos"
