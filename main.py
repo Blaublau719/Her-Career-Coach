@@ -11,10 +11,11 @@ load_dotenv()
 
 class HCCCrew:
 
-  def __init__(self, PostingURL, Personal_Statement, resumeContent):
+  def __init__(self, PostingURL, Personal_Statement, resumeContent, Motivation):
     self.PostingURL = PostingURL
     self.Personal_Statement = Personal_Statement
     self.resumeContent = resumeContent
+    self.Motivation = Motivation
 
   def run(self):
     agents = HCC_Agents()
@@ -34,7 +35,8 @@ class HCCCrew:
       self.Personal_Statement
     )
     WriteCL = tasks.WriteCL(
-      CoverLetterWriter
+      CoverLetterWriter,
+      Motivation
     )
 
     crew = Crew(
@@ -75,11 +77,16 @@ if __name__ == "__main__":
     dedent("""
       Feel free to tell me more about your self, you can provide me more personal information that your resume do not cover like your career plan, professional interet or hobbies.
     """))
+
+  Motivation = input(
+    dedent("""
+      Tell me about your motivation for the job.
+    """))
   
   tools = HCC_Tools()
   resumeContent = tools.read_file("/content/drive/MyDrive/CVs/cv.md") # You need to change the path to your resume path
   
-  HCC_crew = HCCCrew(PostingURL, Personal_Statement, resumeContent)
+  HCC_crew = HCCCrew(PostingURL, Personal_Statement, resumeContent, Motivation)
   result = HCC_crew.run()
   print("\n\n########################")
   print("## Here is a summary of your interested job and a suggested cover letter")
